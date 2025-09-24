@@ -30,4 +30,17 @@ baralho = criar_baralho()
 monte_descarte=[]
 #lista 
 mao_jogador=[]
+#comprar cartas 
+for _ in range(11):
+    mao_jogador.append(desempilha(baralho))
+#Mostra cartas na mão do jogador    
+print(mao_jogador)
+#Mostra total de cartas restantes
+print(tamanho(baralho))
+#descartar duas cartas
+empilhar(monte_descarte,mao_jogador.pop())
+empilhar(monte_descarte,mao_jogador.pop())
+#Mostra cartas na mão do jogador    
+print("Mão do jogador: ",mao_jogador)
+print("Pilha de descarte: ",monte_descarte)
 
